@@ -1,0 +1,307 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;  /* white */
+    color: #333;    /* gray */
+    padding-top: 80px;  /*prevent content from hiding behind the fixed header*/
+}
+
+/* Header Styles */
+header {
+    background-color: #ff7f50;  /* coral */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;    
+    overflow: hidden;    /* Ensure no overflow */
+    top: 0;      /* stick the header to the top of the page */
+    width: 1200px;    /* full width */
+    z-index: 1000;  /* ensure header is ontop */
+}
+
+header h1 {
+    
+    font-size: 50px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Navigation Styles*/
+/* Active Link Styling */
+nav a.active {
+    color: #f16735; /* orange */
+    font-weight: bold;
+    border-bottom: 2px solid #f16735; /* underline active link */
+}
+
+
+/* Container Styles */
+.container {
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+/* Sign-Up Form Heading*/
+#signupHeading {
+    color: #f16735;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 460px;
+}
+
+/* Sign-Up Form */
+form {
+    background-color: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;  
+    margin-left: 440px;
+    backdrop-filter: blur(10px);                /* glass effect */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* subtle border */
+    color: #fff;
+}
+
+form input {
+    width: 240px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* white */
+    border-radius: 4px;
+}
+
+form button {
+    width: 240px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #a34d2d;  /* brownish-red */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: #e76642;  /* sunset orange */
+}
+
+/* Menu Styles */
+
+#menu {
+    margin-bottom: 30px;
+}
+
+#menu h2 {
+    color: #a34d2d;
+    font-size: 50px;
+    margin-left: 460px;
+}
+
+#menu p {
+    color: #a34d2d;
+    font-size: 22px;
+    margin: 0 0 40px 120px
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+#menu ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: box; /* align items horizontally */
+    align-items: center; /* vertically align the text and image */
+}
+
+#menu ul li img {
+    width: 180px;
+    height: 140px;
+    border-radius: 4px; /* make images circular */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* add a shadow to images */
+}
+
+#menu ul li::before {
+    content: "🍴";
+    margin-right: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* gray */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 1200px;
+    bottom: 0;
+    z-index: 1000;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);  /* subtle shadow for extra depth */
+}
+
+/* Slider Styles */
+.slider {
+    position: static;
+    width: 1200px;
+    max-width: 600px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.slides img {
+    height: 250px;
+    width: 1200px;
+    margin-left: 60px;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 4px;
+    opacity: 0.7;    /* make the image slightly transparent */
+    transition: opacity 0.3s ease;  /* smooth transition when the opacity changes */
+
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* background Image Styles*/
+
+/* Dark gradient overlay */
+body {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  /* dark overlay */
+        url('images/table_top.jpg');
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f0f0f0;  /* light text color for readability */
+}
+
+/* Darken background with an overlay */
+header::after {
+    content: '';                /* empty content to create an overlay */
+    position: absolute;         /* position it over the header */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);  /* dark overlay with some transparency */
+    z-index: -1;                /* ensure it's behind the header content */
+}
+
+/* Semi-transparent dark overlay */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);  /* Adjust the opacity for darkening */
+    z-index: -1;  /* Put the overlay behind the footer content */
+}
+
+/* Contact Styles */
+#contact h2 {
+    color: #a34d2d;
+    font-size: 50px;
+    margin: 0 0 10px 450px;
+}
+
+#contact p {
+    font-size: 22px;
+}
+
+#subHeading {
+    color: #a34d2d;
+    font-size: 18px;
+    margin: 0 0 40px 320px
+}
+
+#tradingHeader {
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001; /* Ensure it’s on top */
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background overlay */
+    overflow: auto; /* Allow scrolling */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1000px;
+    max-width: 600px;
+    position: relative; /* close button is positioned relative to this container */
+    z-index: 1002; /* content is above the dark overlay */
+}
+
+.modal-body {
+    color: #333; 
+    font-size: 16px; 
+}
+
+.modal-body h2 {
+    color: #a34d2d;
+    font-size: 24px;
+}
+
+.modal-body h3 {
+    color: #fc4503; /* orange*/
+    font-size: 18px;
+}
+
+.modal-body p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Close button styles */
+.close {
+    color: #9e4d4d;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1003; /* close button is on top of modal content */
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

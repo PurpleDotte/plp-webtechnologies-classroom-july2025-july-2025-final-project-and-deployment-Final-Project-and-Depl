@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home cooked food menu">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Mnandi TakeAways</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mnandi TakeAways</h1>
+        <nav>
+            <a href="#home" onclick="showPage('home')" id="homeLink">Home</a>
+            <a href="#menu" onclick="showPage('menu')" id="menuLink">Menu</a>
+            <a href="#contact" onclick="showPage('contact')" id="contactLink">Contact</a>
+        </nav>
+    </header>
+
+    <div id="home" class="container page">
+        <section>
+            <div class="slider">
+                <div class="slides">
+                    <img src="images/chicken stew.jpg" alt="Chicken stew image">
+                    <img src="images/mince magwinya.jpg" alt="Fat cakes and mince image">
+                    <img src="images/steak.jpg" alt="Steak and pap image">
+                    <img src="images/platter.jpg" alt="Meat and chips platter image">
+                </div>
+            </div>
+
+            <p id="signupHeading">Sign up for yummy extras!</p>
+
+            <form id="signUpForm" onsubmit="return validateForm()">
+                <h2 id="signup">Sign Up</h2>
+                <input type="text" id="name" placeholder="Name" required><br />
+                <input type="text" id="surname" placeholder="Surname" required><br />
+                <input type="email" id="email" placeholder="Email" required><br />
+                <input type="tel" id="phone" placeholder="Phone Number" required><br />
+                <input type="password" id="password" placeholder="Password" required><br />
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required><br />
+                <input type="checkbox" id="checkbox" required> I accept the <a href="terms.html">Terms of Use</a> & <a href="privacy.html">Privacy Policy</a><br />
+                <button type="submit" id="submitBtn">Sign Up</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="container page">
+        <section>
+            <h2>Our Menu</h2>
+            <p>Choose from a variety of home-cooked meals that are guaranteed to satisfy your taste buds!</p>
+            <ul>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact" class="container page">
+        <section>
+            <h2>Contact Us</h2>
+            <p id="subHeading">Have questions? Reach out to us through email or phone!</p>
+            <p>Email: info@mnanditakeaways.com</p>
+            <p>Phone: 0112345678</p>
+            <p id="tradingHeader">Trading Hours</p>
+            <p id="tradingHRS">Mon - Sat: 08h00 to 18h30</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Thank you for exploring our kitchen.</p>
+        <p>&copy; 2025 Mnandi TakeAways. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
